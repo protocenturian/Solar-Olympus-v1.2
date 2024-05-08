@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="encounter" load_steps=2 format=3 uid="uid://d4i8wr1hlkkc5"]
+
+[ext_resource type="Script" path="res://Resources/Res_Scripts/Encounter.gd" id="1_e4vq3"]
+
+[resource]
+script = ExtResource("1_e4vq3")
+position = Vector2i(5, 3)
+weather = "Clear"
+waves = 1
+enemies1 = Array[Resource]([])
+enemies2 = Array[Resource]([])
+enemies3 = Array[Resource]([])
+background = ""

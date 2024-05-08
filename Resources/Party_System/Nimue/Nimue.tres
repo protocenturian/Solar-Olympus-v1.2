@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Hero" load_steps=2 format=3 uid="uid://c53c4hnjidask"]
+
+[ext_resource type="Script" path="res://Resources/Res_Scripts/Heros.gd" id="1_ydske"]
+
+[resource]
+script = ExtResource("1_ydske")
+name = "Morgan"
+job = "Nimue"
+level = 1
+exp = 0
+req_exp = 50
+XP_for = "90*1.39^%s"
+HP_for = "%s*1.15^%s"
+ATK_for = "%s*1.13^%s"
+DEF_for = "%s*1.11^%s"
+ACC_EVA = "%s*1.09^%s"
+HP = 187
+max_HP = 187
+limit = 0
+max_limit = 100
+Phys_Attack = 6
+Phys_Defense = 6
+Tech_Attack = 5
+Tech_Defense = 5
+Accuracy = 4
+Evade = 7
+elemental_res = {
+"Aero": 0,
+"Bio": 0,
+"Bomb": 0,
+"Electric": 0,
+"Frost": 0,
+"Geo": 0,
+"Hydro": 0,
+"Pyro": 0,
+"Shock": 0,
+"Virus": 0
+}
+Skills = Array[Resource]([])

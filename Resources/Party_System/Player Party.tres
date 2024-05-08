@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Party" load_steps=7 format=3 uid="uid://yqbw2wenahws"]
+
+[ext_resource type="Resource" uid="uid://cxaaeumrhkoxn" path="res://Resources/Party_System/Ronin/Ronin.tres" id="1_1yje7"]
+[ext_resource type="Resource" uid="uid://b17kq6knqmwx5" path="res://Resources/Party_System/Nidd/Nidd.tres" id="2_hdusu"]
+[ext_resource type="Resource" uid="uid://c53c4hnjidask" path="res://Resources/Party_System/Nimue/Nimue.tres" id="3_qi321"]
+[ext_resource type="Resource" uid="uid://cqmei7i4eu3ap" path="res://Resources/Party_System/Lemuria/Lemuria.tres" id="4_dul76"]
+[ext_resource type="Script" path="res://Resources/Res_Scripts/Game_Party.gd" id="4_xfnhu"]
+[ext_resource type="Resource" uid="uid://dyl34q2ki50mp" path="res://Resources/Party_System/Nico/Nico.tres" id="5_bhtrl"]
+
+[resource]
+script = ExtResource("4_xfnhu")
+heroes = Array[Resource]([ExtResource("1_1yje7"), ExtResource("2_hdusu"), ExtResource("3_qi321"), ExtResource("4_dul76"), ExtResource("5_bhtrl")])

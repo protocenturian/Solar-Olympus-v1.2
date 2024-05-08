@@ -1,0 +1,12 @@
+res://default_bus_layout.tres
+res://Scenes/overworld.tscn
+res://GUI/stat_sheet_NES.tres
+res://Resources/Encounters/battle.tscn
+res://Scenes/combat_hud.tscn
+res://Resources/Res_Scripts/Heros.gd
+res://Resources/Party_System/Nimue/Nimue.tres
+res://Resources/Party_System/Ronin/Ronin.tres
+res://Scenes/overworld_menu.tscn
+res://Scripts/CharStats.gd
+res://Resources/Party_System/Nidd/Nidd.tres
+res://Scripts/Global.gd

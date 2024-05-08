@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Hero" load_steps=4 format=3 uid="uid://cxaaeumrhkoxn"]
+
+[ext_resource type="Texture2D" uid="uid://dog8e6cdbc1w" path="res://Assets/Player_Sprites/Ronin/Ronin1.png" id="1_i1mw4"]
+[ext_resource type="Script" path="res://Resources/Res_Scripts/Heros.gd" id="2_hvb3f"]
+[ext_resource type="Texture2D" uid="uid://dfwy75rv1oaih" path="res://Assets/Player_Sprites/Ronin/Ronin1_token.png" id="3_aq0j6"]
+
+[resource]
+script = ExtResource("2_hvb3f")
+name = "Tori"
+job = "Ronin"
+level = 1
+exp = 0
+req_exp = 50
+overworld_sprite = ExtResource("1_i1mw4")
+token_sprite = ExtResource("3_aq0j6")
+battle_sprite = ExtResource("1_i1mw4")
+XP_for = "90*1.39^%s"
+HP_for = "%s*1.15^%s"
+ATK_for = "%s*1.13^%s"
+DEF_for = "%s*1.11^%s"
+ACC_EVA = "%s*1.09^%s"
+HP = 210
+max_HP = 210
+limit = 0
+max_limit = 100
+Phys_Attack = 6
+Phys_Defense = 6
+Tech_Attack = 5
+Tech_Defense = 5
+Accuracy = 4
+Evade = 4
+elemental_res = {
+"Aero": 0,
+"Bio": -50,
+"Bomb": 0,
+"Electric": 0,
+"Frost": 0,
+"Geo": 0,
+"Hydro": 0,
+"Pyro": 0,
+"Shock": 0,
+"Virus": 50
+}
+Skills = Array[Resource]([])

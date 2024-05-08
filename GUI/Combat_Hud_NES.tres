@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dtmn5hvlc5mo6"]
+
+[ext_resource type="FontFile" uid="uid://dl3l6w747xon" path="res://Assets/Fonts/nes-cyrillic/nes-cyrillic.ttf" id="1_s8r3u"]
+
+[resource]
+font = ExtResource("1_s8r3u")
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)

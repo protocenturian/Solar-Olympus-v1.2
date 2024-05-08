@@ -1,0 +1,735 @@
+[gd_scene load_steps=32 format=3 uid="uid://8qhbsgs0iiqs"]
+
+[ext_resource type="Script" path="res://Scripts/Overworld_Menus.gd" id="1_03ixg"]
+[ext_resource type="Texture2D" uid="uid://bvk8mretvyua2" path="res://GUI/Button Background.png" id="2_ebjxt"]
+[ext_resource type="Script" path="res://Scripts/Party Menu.gd" id="2_ethfv"]
+[ext_resource type="LabelSettings" path="res://GUI/Combat_Hud_NES.tres" id="3_myxlv"]
+[ext_resource type="Texture2D" uid="uid://mdw3ixtm60pg" path="res://GUI/Character Stats.png" id="4_4q5ts"]
+[ext_resource type="Script" path="res://Scripts/CharStats.gd" id="5_vgt4r"]
+[ext_resource type="LabelSettings" uid="uid://b70m4vot0e2is" path="res://GUI/stat_sheet_NES.tres" id="6_0afai"]
+[ext_resource type="Texture2D" uid="uid://dog8e6cdbc1w" path="res://Assets/Player_Sprites/Ronin/Ronin1.png" id="7_lx1f0"]
+[ext_resource type="FontFile" uid="uid://dl3l6w747xon" path="res://GUI/nes-cyrillic/nes-cyrillic.ttf" id="8_qumej"]
+[ext_resource type="Texture2D" uid="uid://c8w42xivcvxnx" path="res://GUI/Phys_Atk_Icon.png" id="9_vb0j7"]
+[ext_resource type="Texture2D" uid="uid://cq78q21yhc8ii" path="res://GUI/Phys_Def_Icon.png" id="10_hoyxj"]
+[ext_resource type="Texture2D" uid="uid://5pd8amuiaocf" path="res://GUI/Tech_Atk_Icon.png" id="11_3b11u"]
+[ext_resource type="Texture2D" uid="uid://cmkk410sx1kbw" path="res://GUI/Tech_Def_Icon.png" id="12_ohppe"]
+[ext_resource type="Texture2D" uid="uid://dgg1vby080bpv" path="res://GUI/Acc_Icon.png" id="13_imm07"]
+[ext_resource type="Texture2D" uid="uid://cegg8yy53175u" path="res://GUI/Eva_Icon.png" id="14_f1aye"]
+[ext_resource type="Texture2D" uid="uid://iodqytta2x2i" path="res://GUI/Skill Tree.png" id="15_aygl5"]
+[ext_resource type="Texture2D" uid="uid://ddltp45th4l5j" path="res://GUI/Elements/Pyro_element.png" id="15_n1spp"]
+[ext_resource type="Script" path="res://Scenes/Settings.gd" id="16_fgvyv"]
+[ext_resource type="Texture2D" uid="uid://bbocxdx31ften" path="res://GUI/Elements/Hydro_element.png" id="16_i5p7a"]
+[ext_resource type="Texture2D" uid="uid://cg31crxfvctum" path="res://GUI/Elements/Electric_element.png" id="16_jax67"]
+[ext_resource type="Texture2D" uid="uid://co2j8anx7m711" path="res://GUI/Elements/Aero_element.png" id="17_1kqkg"]
+[ext_resource type="Texture2D" uid="uid://dsaxjcu4xxwbh" path="res://GUI/Elements/Geo_element.png" id="17_a6q6n"]
+[ext_resource type="Texture2D" uid="uid://corlyaeshpvlg" path="res://GUI/marked checkbox.png" id="17_puy8u"]
+[ext_resource type="Texture2D" uid="uid://ctqpviic414hs" path="res://GUI/blank checkbox.png" id="18_ttb2v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m1da0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otxbn"]
+content_margin_left = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_0v3e7"]
+default_base_scale = 0.03
+default_font = ExtResource("8_qumej")
+default_font_size = 8
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_otxbn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66xfm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfkmb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w5qdi"]
+font = ExtResource("8_qumej")
+font_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b3v2t"]
+font = ExtResource("8_qumej")
+font_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Container" type="Container" parent="."]
+process_mode = 3
+custom_minimum_size = Vector2(640, 384)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_03ixg")
+
+[node name="Panel" type="ColorRect" parent="Container"]
+custom_minimum_size = Vector2(640, 384)
+layout_mode = 2
+color = Color(0.0235294, 0, 0.0784314, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/Panel"]
+custom_minimum_size = Vector2(640, 384)
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 384.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Panel/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Button Background" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Party" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+tooltip_text = "DevTooltip
+	Party"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "P"
+flat = true
+
+[node name="Button Background2" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Equipment" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+tooltip_text = "DevTooltip
+	Items"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "E"
+flat = true
+
+[node name="Button Background3" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Items" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background3"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+tooltip_text = "DevTooltip
+	Items"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "I"
+flat = true
+
+[node name="Button Background4" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Journal" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background4"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+tooltip_text = "DevTooltip
+	Items"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "J"
+flat = true
+
+[node name="Button Background5" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Map" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background5"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_vertical = 8
+tooltip_text = "DevTooltip
+	Map"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "M"
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Button Background6" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Save" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background6"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_vertical = 8
+tooltip_text = "DevTooltip
+	Save/Load"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "L"
+flat = true
+
+[node name="Button Background7" type="TextureRect" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ebjxt")
+
+[node name="Settings" type="Button" parent="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background7"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_vertical = 8
+tooltip_text = "DevTooltip
+	Settings"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m1da0")
+text = "S"
+flat = true
+
+[node name="Party Menu" type="GridContainer" parent="Container/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(201, 189)
+layout_mode = 2
+script = ExtResource("2_ethfv")
+
+[node name="Party" type="Label" parent="Container/Panel/HBoxContainer/Party Menu"]
+layout_mode = 2
+text = "Party"
+label_settings = ExtResource("3_myxlv")
+horizontal_alignment = 1
+
+[node name="Backup" type="Label" parent="Container/Panel/HBoxContainer/Party Menu"]
+layout_mode = 2
+text = "Backup"
+label_settings = ExtResource("3_myxlv")
+horizontal_alignment = 1
+
+[node name="Character Stats" type="TextureRect" parent="Container/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+texture = ExtResource("4_4q5ts")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/Panel/HBoxContainer/Character Stats"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="CharStats" type="VBoxContainer" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("5_vgt4r")
+
+[node name="NameBox" type="HBoxContainer" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats"]
+layout_mode = 2
+
+[node name="Name_Level" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/NameBox"]
+layout_mode = 2
+text = "Tori
+Level 1"
+label_settings = ExtResource("6_0afai")
+
+[node name="Job" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/NameBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Ronin"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer"]
+custom_minimum_size = Vector2(64, 128)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_lx1f0")
+stretch_mode = 5
+
+[node name="Status" type="GridContainer" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+columns = 2
+
+[node name="HP" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Health Points"
+mouse_filter = 1
+theme = SubResource("Theme_0v3e7")
+text = "HP"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HP_Per" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "100"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="PHYS_ATK_ICON" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+tooltip_text = " Physical Attack"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("9_vb0j7")
+
+[node name="Phys_ATK" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "6"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="PHYS_DEF_ICON" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+tooltip_text = " Physical Defense"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("10_hoyxj")
+
+[node name="Phys_DEF" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "6"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="TECH_ATK_ICON" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+tooltip_text = " Magic Attack"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("11_3b11u")
+
+[node name="Tech_ATK" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "6"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="TECH_DEF_ICON" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+tooltip_text = "Magic Defense"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("12_ohppe")
+
+[node name="Tech_DEF" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "6"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="ACC_ICON" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+tooltip_text = "Accuracy
+"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("13_imm07")
+
+[node name="ACC" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "6"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="EVA_ICON" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+tooltip_text = "Evasion"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("14_f1aye")
+
+[node name="EVA" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/HBoxContainer/Status"]
+layout_mode = 2
+text = "6"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+
+[node name="Ele Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats"]
+layout_mode = 2
+text = "Elemental Resistance"
+label_settings = ExtResource("6_0afai")
+
+[node name="Elemental Res" type="GridContainer" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 5
+
+[node name="Pyro" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Pyro Resistance"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("15_n1spp")
+
+[node name="Pyro Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Pyro"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Aero" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Aero Resistance"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("17_1kqkg")
+
+[node name="Aero Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Aero"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Hydro" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Hydro Resistance"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("16_i5p7a")
+
+[node name="Hydro Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Hydro"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Geo" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Geo Resistance"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("17_a6q6n")
+
+[node name="Geo Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Geo"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Bio" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Bio Resistance"
+theme = SubResource("Theme_0v3e7")
+
+[node name="Bio Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Bio"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Electric" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Electro Resistance"
+theme = SubResource("Theme_0v3e7")
+texture = ExtResource("16_jax67")
+
+[node name="Electric Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Electric"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Shock" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Shock Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Shock"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Frost" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Frost Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Frost"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Bomb" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Bomb Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Bomb"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Virus" type="TextureRect" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Virus Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats/Elemental Res/Virus"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 16.0
+text = "10%"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Sta Res" type="Label" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats"]
+layout_mode = 2
+text = "Status Resistance"
+label_settings = ExtResource("6_0afai")
+
+[node name="GridContainer" type="GridContainer" parent="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats"]
+layout_mode = 2
+
+[node name="Job Tree" type="TextureRect" parent="Container/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(190, 384)
+layout_mode = 2
+texture = ExtResource("15_aygl5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/Panel/HBoxContainer/Job Tree"]
+custom_minimum_size = Vector2(190, 384)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/Panel/HBoxContainer/Job Tree/MarginContainer"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="Container/Panel/HBoxContainer/Job Tree/MarginContainer"]
+layout_mode = 2
+tabs_visible = false
+
+[node name="Ronin" type="GridContainer" parent="Container/Panel/HBoxContainer/Job Tree/MarginContainer/TabContainer"]
+layout_mode = 2
+
+[node name="Nobu" type="GridContainer" parent="Container/Panel/HBoxContainer/Job Tree/MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Miya" type="GridContainer" parent="Container/Panel/HBoxContainer/Job Tree/MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Equipment Page" type="TextureRect" parent="Container/Panel/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("15_aygl5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/Panel/HBoxContainer/Equipment Page"]
+custom_minimum_size = Vector2(190, 384)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="ItemList" type="ItemList" parent="Container/Panel/HBoxContainer/Equipment Page/MarginContainer"]
+layout_mode = 2
+tooltip_text = "equipment"
+max_columns = 4
+same_column_width = true
+
+[node name="Settings" type="Panel" parent="Container/Panel/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(604, 0)
+layout_mode = 2
+script = ExtResource("16_fgvyv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Panel/HBoxContainer/Settings"]
+custom_minimum_size = Vector2(604, 0)
+layout_mode = 0
+offset_right = 604.0
+offset_bottom = 86.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Game Settings"
+label_settings = ExtResource("3_myxlv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(602, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Fullscreen_Borderless" type="HBoxContainer" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Fullscreen" type="CheckBox" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/Fullscreen_Borderless"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_qumej")
+theme_override_font_sizes/font_size = 8
+theme_override_icons/checked = ExtResource("17_puy8u")
+theme_override_icons/unchecked = ExtResource("18_ttb2v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_66xfm")
+text = "Fullscreen"
+
+[node name="Borderless" type="CheckBox" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/Fullscreen_Borderless"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_qumej")
+theme_override_font_sizes/font_size = 8
+theme_override_icons/checked = ExtResource("17_puy8u")
+theme_override_icons/unchecked = ExtResource("18_ttb2v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cfkmb")
+text = "Borderless"
+
+[node name="HSeparator3" type="HSeparator" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(602, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Music Audio" type="HBoxContainer" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(241, 23)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Music Volume Label" type="Label" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/Music Audio"]
+layout_mode = 2
+text = "Music Volume"
+label_settings = SubResource("LabelSettings_w5qdi")
+
+[node name="Music Volume" type="HSlider" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/Music Audio"]
+custom_minimum_size = Vector2(128, 23)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="SFX Audio" type="HBoxContainer" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(241, 23)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="SFX Volume Label" type="Label" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/SFX Audio"]
+layout_mode = 2
+text = "SFX Volume"
+label_settings = SubResource("LabelSettings_b3v2t")
+
+[node name="SFX Volume" type="HSlider" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/SFX Audio"]
+custom_minimum_size = Vector2(128, 23)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="HSeparator2" type="HSeparator" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(602, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Quit Button" type="Button" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(156, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+flat = true
+
+[node name="Label" type="Label" parent="Container/Panel/HBoxContainer/Settings/VBoxContainer/Quit Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit Game"
+label_settings = ExtResource("6_0afai")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background/Party" to="Container" method="_on_party_pressed"]
+[connection signal="pressed" from="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background2/Equipment" to="Container" method="_on_equipment_pressed"]
+[connection signal="pressed" from="Container/Panel/HBoxContainer/MarginContainer/VBoxContainer/Button Background7/Settings" to="Container" method="_on_settings_pressed"]
+[connection signal="charstat" from="Container/Panel/HBoxContainer/Party Menu" to="Container/Panel/HBoxContainer/Character Stats/MarginContainer/CharStats" method="_on_party_menu_charstat"]
+[connection signal="toggled" from="Container/Panel/HBoxContainer/Settings/VBoxContainer/Fullscreen_Borderless/Fullscreen" to="Container/Panel/HBoxContainer/Settings" method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Container/Panel/HBoxContainer/Settings/VBoxContainer/Fullscreen_Borderless/Borderless" to="Container/Panel/HBoxContainer/Settings" method="_on_borderless_toggled"]
+[connection signal="value_changed" from="Container/Panel/HBoxContainer/Settings/VBoxContainer/Music Audio/Music Volume" to="Container/Panel/HBoxContainer/Settings" method="_on_music_volume_value_changed"]
+[connection signal="pressed" from="Container/Panel/HBoxContainer/Settings/VBoxContainer/Quit Button" to="Container/Panel/HBoxContainer/Settings" method="_on_quit_button_pressed"]

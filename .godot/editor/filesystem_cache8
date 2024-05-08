@@ -1,0 +1,104 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1714719623
+Combat Hud.gd::GDScript::-1::1714159305::0::1::::<>Control<>::
+default_bus_layout.tres::AudioBusLayout::7420272362967685722::1714536143::0::1::::<><>::
+icon.svg::CompressedTexture2D::7425571466646578187::1713666268::1713666274::1::::<><>::
+PartySlot.gd::GDScript::-1::1714100819::0::1::::PartySlot<>PanelContainer<>::
+::res://Assets/::1714157612
+world_builder.png::CompressedTexture2D::8692820675130423541::1713305386::1713666568::1::::<><>::
+::res://Assets/Audio Assets/::1714083626
+Three Red Hearts - Penguin Town.ogg::AudioStreamOggVorbis::1429192100411511176::1714083623::1714083626::1::::<><>::
+::res://Assets/Combat/::1714158473
+test background.png::CompressedTexture2D::815007630456394385::1714158472::1714158473::1::::<><>::
+test combat.webp::CompressedTexture2D::5797177458064771588::1714157620::1714157620::1::::<><>::
+::res://Assets/Enemy_Sprites/::1713682813
+Chapter1_Enemy_Sprites.png::CompressedTexture2D::46446427520966861::1713682811::1713682813::1::::<><>::
+::res://Assets/Player_Sprites/::1713667144
+::res://Assets/Player_Sprites/Ronin/::1714096380
+Ronin1.png::CompressedTexture2D::239891310703654218::1714096375::1714096380::1::::<><>::
+Ronin1_token.png::CompressedTexture2D::7557138536041750535::1713986893::1713986909::1::::<><>::
+::res://GUI/::1714536145
+Acc_Icon.png::CompressedTexture2D::7594397613695412111::1714090166::1714090171::1::::<><>::
+blank checkbox.png::CompressedTexture2D::6140408129813190356::1714059450::1714059505::1::::<><>::
+Button Background.png::CompressedTexture2D::3883056167889003611::1714113210::1714113212::1::::<><>::
+Character Stats.png::CompressedTexture2D::849845489586626880::1714090612::1714090614::1::::<><>::
+Combat_Hud_NES.tres::LabelSettings::-1::1713735718::0::1::::<><>::
+drag indicator.png::CompressedTexture2D::4590024574134694677::1714030005::1714030007::1::::<><>::
+Eva_Icon.png::CompressedTexture2D::5066407540655400160::1714088746::1714088781::1::::<><>::
+indicator.png::CompressedTexture2D::5670393836324941309::1713998599::1713998601::1::::<><>::
+marked checkbox.png::CompressedTexture2D::5791290353118844152::1714059477::1714059505::1::::<><>::
+Party Member Menu.png::CompressedTexture2D::5511090834380748791::1714051994::1714052015::1::::<><>::
+Phys_Atk_Icon.png::CompressedTexture2D::7136299748609403157::1714069969::1714069970::1::::<><>::
+Phys_Def_Icon.png::CompressedTexture2D::5963956646583695004::1714081178::1714081185::1::::<><>::
+Skill Tree.png::CompressedTexture2D::590624052117922802::1714090497::1714090501::1::::<><>::
+stat_sheet_NES.tres::LabelSettings::4684854641412556318::1714536145::0::1::::<><>::uid://dl3l6w747xon::::res://GUI/nes-cyrillic/nes-cyrillic.ttf
+Tech_Atk_Icon.png::CompressedTexture2D::2136872077086097537::1714081563::1714081570::1::::<><>::
+Tech_Def_Icon.png::CompressedTexture2D::5636411631610916128::1714091312::1714091318::1::::<><>::
+::res://GUI/Combat Hud/::1714159451
+Character_Menu.png::CompressedTexture2D::2702032218801302965::1712631500::1714159451::1::::<><>::
+Enemy_Menu.png::CompressedTexture2D::3381610970462908690::1712563977::1714159451::1::::<><>::
+Focus Icon.png::CompressedTexture2D::3650133217093489628::1712877924::1714159451::1::::<><>::
+Full_Screen.png::CompressedTexture2D::1678948656055042763::1712562781::1714159451::1::::<><>::
+Health_Menu.png::CompressedTexture2D::6472597446101864965::1712563827::1714159451::1::::<><>::
+Settings_tab.png::CompressedTexture2D::904616145870667987::1712562365::1714159451::1::::<><>::
+Volume Off.png::CompressedTexture2D::5861426785430929986::1712879101::1714159451::1::::<><>::
+Volume On.png::CompressedTexture2D::2335413434016272604::1712879084::1714159451::1::::<><>::
+::res://GUI/Elements/::1714114738
+Aero_element.png::CompressedTexture2D::5811828782982773646::1714114734::1714114738::1::::<><>::
+Electric_element.png::CompressedTexture2D::5253360148410603456::1714102270::1714102276::1::::<><>::
+Geo_element.png::CompressedTexture2D::8424073936834739913::1714103818::1714103824::1::::<><>::
+Hydro_element.png::CompressedTexture2D::2485673517541023081::1714103003::1714103007::1::::<><>::
+Pyro_element.png::CompressedTexture2D::7393718717454261737::1714101566::1714101569::1::::<><>::
+::res://GUI/nes-cyrillic/::1713987190
+license.txt::TextFile::-1::1712558201::0::1::::<><>::
+nes-cyrillic.ttf::FontFile::234996069442693269::1712558201::1713987190::1::::<><>::
+readme.txt::TextFile::-1::1712558201::0::1::::<><>::
+::res://Resources/::1714155212
+::res://Resources/Encounters/::1714712362
+battle.tscn::PackedScene::2665340744040684297::1714712362::0::1::::<><>::uid://lu2b6ot72042::::res://Assets/Combat/test background.png<>uid://c8ag8cvajxvem::::res://Scenes/combat_hud.tscn<>res://Scripts/Player Group Combat.gd<>uid://dog8e6cdbc1w::::res://Assets/Player_Sprites/Ronin/Ronin1.png
+Encounter1.tres::Resource/Resource::9213297420236941162::1713717194::0::1::::<><>::res://Resources/Res_Scripts/Encounter.gd
+::res://Resources/Encounter_Lists/::1713686386
+Chapter1.tres::Resource/Resource::2961680207118571957::1713686386::0::1::::<><>::res://Resources/Res_Scripts/Encounter_List.gd<>uid://d4i8wr1hlkkc5::::res://Resources/Encounters/Encounter1.tres
+::res://Resources/Party_System/::1714097242
+Player Party.tres::Resource/Resource::1717663748151681770::1714097242::0::1::::<><>::uid://cxaaeumrhkoxn::::res://Resources/Party_System/Ronin/Ronin.tres<>uid://b17kq6knqmwx5::::res://Resources/Party_System/Nidd/Nidd.tres<>uid://c53c4hnjidask::::res://Resources/Party_System/Nimue/Nimue.tres<>uid://cqmei7i4eu3ap::::res://Resources/Party_System/Lemuria/Lemuria.tres<>res://Resources/Res_Scripts/Game_Party.gd<>uid://dyl34q2ki50mp::::res://Resources/Party_System/Nico/Nico.tres
+::res://Resources/Party_System/Lemuria/::1714097242
+Lemuria.tres::Resource/Resource::5920894247395173631::1714080749::0::1::::<><>::res://Resources/Res_Scripts/Heros.gd
+::res://Resources/Party_System/Nico/::1714115339
+Nico.tres::Resource/Resource::8868255200057015803::1714115339::0::1::::<><>::res://Resources/Res_Scripts/Heros.gd
+::res://Resources/Party_System/Nidd/::1714713109
+Nidd.tres::Resource/Hero::4278028093326437252::1714713109::0::1::::<><>::res://Resources/Res_Scripts/Heros.gd
+::res://Resources/Party_System/Nimue/::1714713109
+Nimue.tres::Resource/Hero::6936482863815258726::1714713109::0::1::::<><>::res://Resources/Res_Scripts/Heros.gd
+::res://Resources/Party_System/Ronin/::1714713109
+Ronin.tres::Resource/Hero::6387192984023388979::1714713109::0::1::::<><>::uid://dog8e6cdbc1w::::res://Assets/Player_Sprites/Ronin/Ronin1.png<>res://Resources/Res_Scripts/Heros.gd<>uid://dfwy75rv1oaih::::res://Assets/Player_Sprites/Ronin/Ronin1_token.png
+::res://Resources/Res_Scripts/::1714713038
+Encounter.gd::GDScript::-1::1713713605::0::1::::encounter<>Resource<>::
+Encounter_List.gd::GDScript::-1::1713686218::0::1::::Encounter_List<>Resource<>::
+Game_Party.gd::GDScript::-1::1714014958::0::1::::Party<>Resource<>::
+Heros.gd::GDScript::-1::1714713038::0::1::::Hero<>Resource<>::
+Save Data.gd::GDScript::-1::1714154827::0::1::::<>Resource<>::
+world_stats.gd::GDScript::-1::1714155148::0::1::::World_Stats<>Resource<>::
+::res://Resources/World_data/::1714156311
+Start_Game.tres::Resource/Resource::5142164442536101373::1714156311::0::1::::<><>::res://Resources/Res_Scripts/world_stats.gd
+::res://Scenes/::1714713255
+combat_hud.tscn::PackedScene::7089496578097279600::1714713255::0::1::::<><>::res://Combat Hud.gd<>uid://cyhmy73dout0h::::res://GUI/Combat Hud/Health_Menu.png<>uid://bogcvyiqhhvpy::::res://GUI/Combat Hud/Enemy_Menu.png<>uid://m5g5pq2susg6::::res://GUI/Combat Hud/Settings_tab.png
+overworld.tscn::PackedScene::2335533708606699013::1714713255::0::1::::<><>::uid://dfipgha2mg4xr::::res://Scenes/Overworld_Zones/SCN_area_[1x5].tscn<>res://Scripts/overworld.gd<>uid://cqasa7nqf7s1l::::res://Scenes/Player.tscn<>uid://8qhbsgs0iiqs::::res://Scenes/overworld_menu.tscn<>uid://umkt5mh0rf1i::::res://Assets/Audio Assets/Three Red Hearts - Penguin Town.ogg
+overworld_menu.tscn::PackedScene::2349689644403994594::1714713255::0::1::::<><>::res://Scripts/Overworld_Menus.gd<>uid://bvk8mretvyua2::::res://GUI/Button Background.png<>res://Scripts/Party Menu.gd<>res://GUI/Combat_Hud_NES.tres<>uid://mdw3ixtm60pg::::res://GUI/Character Stats.png<>res://Scripts/CharStats.gd<>uid://b70m4vot0e2is::::res://GUI/stat_sheet_NES.tres<>uid://dog8e6cdbc1w::::res://Assets/Player_Sprites/Ronin/Ronin1.png<>uid://dl3l6w747xon::::res://GUI/nes-cyrillic/nes-cyrillic.ttf<>uid://c8w42xivcvxnx::::res://GUI/Phys_Atk_Icon.png<>uid://cq78q21yhc8ii::::res://GUI/Phys_Def_Icon.png<>uid://5pd8amuiaocf::::res://GUI/Tech_Atk_Icon.png<>uid://cmkk410sx1kbw::::res://GUI/Tech_Def_Icon.png<>uid://dgg1vby080bpv::::res://GUI/Acc_Icon.png<>uid://cegg8yy53175u::::res://GUI/Eva_Icon.png<>uid://iodqytta2x2i::::res://GUI/Skill Tree.png<>uid://ddltp45th4l5j::::res://GUI/Elements/Pyro_element.png<>res://Scenes/Settings.gd<>uid://bbocxdx31ften::::res://GUI/Elements/Hydro_element.png<>uid://cg31crxfvctum::::res://GUI/Elements/Electric_element.png<>uid://co2j8anx7m711::::res://GUI/Elements/Aero_element.png<>uid://dsaxjcu4xxwbh::::res://GUI/Elements/Geo_element.png<>uid://corlyaeshpvlg::::res://GUI/marked checkbox.png<>uid://ctqpviic414hs::::res://GUI/blank checkbox.png
+party_member.tscn::PackedScene::6545640911181859084::1714159156::0::1::::<><>::uid://dfwy75rv1oaih::::res://Assets/Player_Sprites/Ronin/Ronin1_token.png<>res://Scripts/party_member.gd<>uid://dl3l6w747xon::::res://GUI/nes-cyrillic/nes-cyrillic.ttf<>uid://ckru4jfkvbexb::::res://GUI/Party Member Menu.png<>uid://cm11s8c1y1bon::::res://GUI/indicator.png<>uid://b6npbfpiqsswr::::res://GUI/drag indicator.png<>res://Scripts/Drag_Drop.gd
+Player.tscn::PackedScene::5896957473029106519::1714159156::0::1::::<><>::uid://dog8e6cdbc1w::::res://Assets/Player_Sprites/Ronin/Ronin1.png<>res://Scripts/Player.gd
+Settings.gd::GDScript::-1::1714097694::0::1::::PlayerSettings<>Panel<>::
+::res://Scenes/Overworld_Zones/::1714159156
+SCN_area_[0x5].tscn::PackedScene::3368640669890245491::1713685133::0::1::::<><>::uid://dv34qsmx7ilqj::::res://Assets/world_builder.png
+SCN_area_[1x4].tscn::PackedScene::6292722923445953688::1713826099::0::1::::<><>::uid://dv34qsmx7ilqj::::res://Assets/world_builder.png
+SCN_area_[1x5].tscn::PackedScene::7527643129863383267::1714159156::0::1::::<><>::uid://dv34qsmx7ilqj::::res://Assets/world_builder.png
+SCN_area_[2x5].tscn::PackedScene::2278852015980845361::1713686218::0::1::::<><>::uid://dv34qsmx7ilqj::::res://Assets/world_builder.png<>uid://wq73s1avbr6::::res://Assets/Enemy_Sprites/Chapter1_Enemy_Sprites.png
+::res://Scripts/::1714713238
+CharStats.gd::GDScript::-1::1714713047::0::1::::<>VBoxContainer<>::
+Drag_Drop.gd::GDScript::-1::1714100784::0::1::::<>TextureRect<>::
+Global.gd::GDScript::-1::1714713238::0::1::::<>Node<>::
+overworld.gd::GDScript::-1::1714156267::0::1::::<>Node2D<>::
+Overworld_Menus.gd::GDScript::-1::1714113712::0::1::::<>Container<>::
+Party Menu.gd::GDScript::-1::1714065810::0::1::::<>GridContainer<>::
+party_member.gd::GDScript::-1::1714072621::0::1::::PartyMember<>Control<>::
+Player Group Combat.gd::GDScript::-1::1714159035::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1714156395::0::1::::Player<>Node2D<>::

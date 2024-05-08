@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Hero" load_steps=2 format=3 uid="uid://b17kq6knqmwx5"]
+
+[ext_resource type="Script" path="res://Resources/Res_Scripts/Heros.gd" id="1_qh5bl"]
+
+[resource]
+script = ExtResource("1_qh5bl")
+name = "Nidd"
+job = "Reclaiment"
+level = 1
+exp = 0
+req_exp = 50
+XP_for = "90*1.39^%s"
+HP_for = "%s*1.15^%s"
+ATK_for = "%s*1.13^%s"
+DEF_for = "%s*1.11^%s"
+ACC_EVA = "%s*1.09^%s"
+HP = 165
+max_HP = 165
+limit = 0
+max_limit = 100
+Phys_Attack = 0
+Phys_Defense = 5
+Tech_Attack = 7
+Tech_Defense = 6
+Accuracy = 4
+Evade = 4
+elemental_res = {
+"Aero": 0,
+"Bio": 50,
+"Bomb": 0,
+"Electric": 0,
+"Frost": 0,
+"Geo": 0,
+"Hydro": 0,
+"Pyro": 0,
+"Shock": 0,
+"Virus": -50
+}
+Skills = Array[Resource]([])

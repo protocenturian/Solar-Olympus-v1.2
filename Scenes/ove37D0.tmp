@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://8jl5tgr65xx2"]
+
+[ext_resource type="PackedScene" uid="uid://dfipgha2mg4xr" path="res://Scenes/Overworld_Zones/SCN_area_[1x5].tscn" id="1_k25gb"]
+[ext_resource type="Script" path="res://Scripts/overworld.gd" id="1_s25pi"]
+[ext_resource type="PackedScene" uid="uid://cqasa7nqf7s1l" path="res://Scenes/Player.tscn" id="2_37h33"]
+[ext_resource type="Script" path="res://Scripts/Overworld_Menus.gd" id="4_4mi52"]
+[ext_resource type="Script" path="res://Scenes/Party Menu.gd" id="5_oahxx"]
+[ext_resource type="LabelSettings" path="res://GUI/Combat_Hud_NES.tres" id="5_toweg"]
+
+[node name="Overworld" type="Node2D"]
+script = ExtResource("1_s25pi")
+
+[node name="Area [1x5]" parent="." instance=ExtResource("1_k25gb")]
+
+[node name="Player" parent="." instance=ExtResource("2_37h33")]
+position = Vector2(8, 8)
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(16, 16)
+anchor_mode = 0
+zoom = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Container" type="Container" parent="CanvasLayer"]
+process_mode = 3
+custom_minimum_size = Vector2(320, 192)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_4mi52")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Container"]
+custom_minimum_size = Vector2(640, 382)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Container/Panel"]
+custom_minimum_size = Vector2(201, 382)
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 382.0
+
+[node name="Party Menu" type="GridContainer" parent="CanvasLayer/Container/Panel/NinePatchRect"]
+custom_minimum_size = Vector2(201, 189)
+layout_mode = 0
+offset_top = 3.0
+offset_right = 201.0
+offset_bottom = 427.0
+script = ExtResource("5_oahxx")
+
+[node name="Party" type="Label" parent="CanvasLayer/Container/Panel/NinePatchRect/Party Menu"]
+layout_mode = 2
+text = "Party"
+label_settings = ExtResource("5_toweg")
+horizontal_alignment = 1
+
+[node name="Backup" type="Label" parent="CanvasLayer/Container/Panel/NinePatchRect/Party Menu"]
+layout_mode = 2
+text = "Backup"
+label_settings = ExtResource("5_toweg")
+horizontal_alignment = 1
+
+[connection signal="change_map" from="Player" to="." method="_on_player_change_map"]
+[connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]

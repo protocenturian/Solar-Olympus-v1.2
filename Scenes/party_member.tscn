@@ -1,0 +1,185 @@
+[gd_scene load_steps=16 format=3 uid="uid://c0i00qnpf8nkm"]
+
+[ext_resource type="Texture2D" uid="uid://dfwy75rv1oaih" path="res://Assets/Player_Sprites/Ronin/Ronin1_token.png" id="1_hwyfr"]
+[ext_resource type="Script" path="res://Scripts/party_member.gd" id="1_ifhax"]
+[ext_resource type="FontFile" uid="uid://dl3l6w747xon" path="res://GUI/nes-cyrillic/nes-cyrillic.ttf" id="2_88afv"]
+[ext_resource type="Texture2D" uid="uid://ckru4jfkvbexb" path="res://GUI/Party Member Menu.png" id="2_h0ug7"]
+[ext_resource type="Texture2D" uid="uid://cm11s8c1y1bon" path="res://GUI/indicator.png" id="3_ogk8d"]
+[ext_resource type="Texture2D" uid="uid://b6npbfpiqsswr" path="res://GUI/drag indicator.png" id="4_yienu"]
+[ext_resource type="Script" path="res://Scripts/Drag_Drop.gd" id="6_q4mi3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wy7qo"]
+font = ExtResource("2_88afv")
+
+[sub_resource type="LabelSettings" id="LabelSettings_26qib"]
+font = ExtResource("2_88afv")
+font_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xperg"]
+bg_color = Color(0.372549, 0.372549, 0.372549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bn5o"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cg3v0"]
+font = ExtResource("2_88afv")
+font_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1cyd"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x80h3"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_g6thd"]
+resource_local_to_scene = false
+
+[node name="Party Member" type="Control"]
+custom_minimum_size = Vector2(201, 62)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -439.0
+offset_bottom = -322.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_ifhax")
+
+[node name="Player Container" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(201, 62)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Menu Background" type="TextureRect" parent="Player Container"]
+layout_mode = 2
+texture = ExtResource("2_h0ug7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player Container"]
+custom_minimum_size = Vector2(199, 62)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Token_Art" type="TextureRect" parent="Player Container/HBoxContainer"]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_hwyfr")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player Container/HBoxContainer"]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+
+[node name="Player" type="Control" parent="Player Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(80, 35)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+
+[node name="Name" type="Label" parent="Player Container/HBoxContainer/VBoxContainer/Player"]
+custom_minimum_size = Vector2(125, 20)
+layout_mode = 2
+offset_right = 125.0
+offset_bottom = 20.0
+mouse_filter = 1
+text = "Ronin"
+label_settings = SubResource("LabelSettings_wy7qo")
+
+[node name="Level" type="Label" parent="Player Container/HBoxContainer/VBoxContainer/Player/Name"]
+layout_mode = 2
+offset_top = 18.0
+offset_right = 56.0
+offset_bottom = 28.0
+size_flags_vertical = 0
+mouse_filter = 1
+text = "Level 1"
+label_settings = SubResource("LabelSettings_26qib")
+
+[node name="EXP" type="ProgressBar" parent="Player Container/HBoxContainer/VBoxContainer/Player/Name/Level"]
+custom_minimum_size = Vector2(60, 3)
+layout_mode = 2
+offset_top = 11.0
+offset_right = 60.0
+offset_bottom = 14.0
+size_flags_horizontal = 0
+mouse_filter = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_xperg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3bn5o")
+value = 50.0
+show_percentage = false
+
+[node name="Stats" type="Control" parent="Player Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(125, 20)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Status" type="Label" parent="Player Container/HBoxContainer/VBoxContainer/Stats"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+offset_right = 125.0
+offset_bottom = 10.0
+mouse_filter = 1
+text = "HP: 100/100"
+label_settings = SubResource("LabelSettings_cg3v0")
+
+[node name="Health" type="ProgressBar" parent="Player Container/HBoxContainer/VBoxContainer/Stats/Status"]
+custom_minimum_size = Vector2(120, 4)
+layout_mode = 2
+offset_top = 11.0
+offset_right = 125.0
+offset_bottom = 15.0
+mouse_filter = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_xperg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3bn5o")
+max_value = 1000.0
+show_percentage = false
+
+[node name="Limit" type="ProgressBar" parent="Player Container/HBoxContainer/VBoxContainer/Stats/Status/Health"]
+custom_minimum_size = Vector2(125, 2)
+layout_mode = 2
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 7.0
+mouse_filter = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_xperg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_r1cyd")
+max_value = 210.0
+show_percentage = false
+
+[node name="Character Button" type="Button" parent="Player Container"]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x80h3")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_g6thd")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Player Container"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("4_yienu")
+script = ExtResource("6_q4mi3")
+
+[node name="Indicator" type="TextureRect" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 187.0
+offset_top = 31.0
+offset_right = 219.0
+offset_bottom = 63.0
+texture = ExtResource("3_ogk8d")
+
+[connection signal="data" from="." to="Player Container/TextureRect" method="_on_party_member_data"]
+[connection signal="toggled" from="Player Container/Character Button" to="." method="_on_character_button_toggled"]

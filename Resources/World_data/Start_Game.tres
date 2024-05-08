@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="World_Stats" load_steps=2 format=3 uid="uid://cfi5xx3nbwmg8"]
+
+[ext_resource type="Script" path="res://Resources/Res_Scripts/world_stats.gd" id="1_sul1q"]
+
+[resource]
+script = ExtResource("1_sul1q")
+mapx = 1
+mapy = 5
+player_pos = Vector2i(8, 6)

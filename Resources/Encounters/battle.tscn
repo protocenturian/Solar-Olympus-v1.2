@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd8d1jf76d5y0"]
+
+[ext_resource type="Texture2D" uid="uid://lu2b6ot72042" path="res://Assets/Combat/test background.png" id="1_f64mf"]
+[ext_resource type="PackedScene" uid="uid://c8ag8cvajxvem" path="res://Scenes/combat_hud.tscn" id="2_1grry"]
+[ext_resource type="Script" path="res://Scripts/Player Group Combat.gd" id="2_jlasn"]
+[ext_resource type="Texture2D" uid="uid://dog8e6cdbc1w" path="res://Assets/Player_Sprites/Ronin/Ronin1.png" id="3_dsink"]
+
+[node name="Battle" type="Control"]
+custom_minimum_size = Vector2(1280, 786)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 402.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 1280.0
+offset_bottom = 771.0
+texture = ExtResource("1_f64mf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 387)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Combat Menu" type="CanvasLayer" parent="."]
+
+[node name="Combat Hud" parent="Combat Menu" instance=ExtResource("2_1grry")]
+custom_minimum_size = Vector2(640, 384)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 913.0
+offset_bottom = 549.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Player Group" type="Node2D" parent="."]
+position = Vector2(40, 48)
+script = ExtResource("2_jlasn")
+
+[node name="Character1" type="Sprite2D" parent="Player Group"]
+position = Vector2(376, 245)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dsink")
+
+[node name="Character2" type="Sprite2D" parent="Player Group"]
+position = Vector2(160, 290)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dsink")
+
+[node name="Character3" type="Sprite2D" parent="Player Group"]
+position = Vector2(205, 403)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dsink")
+
+[node name="Enemy Group" type="Node2D" parent="."]
+position = Vector2(1235, 60)

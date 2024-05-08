@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://8jl5tgr65xx2"]
+
+[ext_resource type="PackedScene" uid="uid://dfipgha2mg4xr" path="res://Scenes/Overworld_Zones/SCN_area_[1x5].tscn" id="1_k25gb"]
+[ext_resource type="Script" path="res://Scripts/overworld.gd" id="1_s25pi"]
+[ext_resource type="PackedScene" uid="uid://cqasa7nqf7s1l" path="res://Scenes/Player.tscn" id="2_37h33"]
+[ext_resource type="PackedScene" uid="uid://8qhbsgs0iiqs" path="res://Scenes/overworld_menu.tscn" id="4_6io2i"]
+[ext_resource type="AudioStream" uid="uid://umkt5mh0rf1i" path="res://Assets/Audio Assets/Three Red Hearts - Penguin Town.ogg" id="19_ig1uj"]
+
+[node name="Overworld" type="Node2D"]
+script = ExtResource("1_s25pi")
+
+[node name="Area [1x5]" parent="." instance=ExtResource("1_k25gb")]
+
+[node name="Player" parent="." instance=ExtResource("2_37h33")]
+position = Vector2(8, 8)
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(16, 16)
+anchor_mode = 0
+zoom = Vector2(2, 2)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_6io2i")]
+
+[node name="Area Music" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("19_ig1uj")
+autoplay = true
+attenuation = 2.07053
+bus = &"Music"
+
+[connection signal="change_map" from="Player" to="." method="_on_player_change_map"]
+[connection signal="encounter_start" from="Player" to="." method="_on_player_encounter_start"]
